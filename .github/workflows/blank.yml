@@ -28,7 +28,7 @@ jobs:
     - name: Run the installer
       run: | 
         ls -alrth
-        chmod +x bazel-1.0.1-installer-linux-x86_64.sh ./bazel-1.0.1-installer-linux-x86_64.sh --user
+        chmod +x bazel-1.0.1-installer-linux-x86_64.sh ./bazel-1.0.1-installer-linux-x86_64.sh
     - name: Set up your environment
       run: |
         ls -alrth
