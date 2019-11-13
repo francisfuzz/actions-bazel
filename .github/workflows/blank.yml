@@ -15,7 +15,23 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+    # https://docs.bazel.build/versions/1.1.0/install-ubuntu.html
     - name: Install required packages
       run: |
         sleep 15
         sudo apt-get install pkg-config zip g++ zlib1g-dev unzip python3
+    - name: Download Bazel
+      run: |
+        ls -alrth
+        wget -v https://github.com/bazelbuild/bazel/releases/download/1.0.1/bazel-1.0.1-installer-linux-x86_64.sh
+        ls -alrth
+    - name: Run the installer
+      run: | 
+        ls -alrth
+        chmod +x bazel-1.0.1-installer-linux-x86_64.sh ./bazel-1.0.1-installer-linux-x86_64.sh --user
+    - name: Set up your environment
+      run: |
+        ls -alrth
+        export PATH="$PATH:$HOME/bin"
+        echo $PATH
+        
