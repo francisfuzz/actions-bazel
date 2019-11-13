@@ -17,4 +17,5 @@ jobs:
         echo test, and deploy your project.
     - name: Install required packages
       run: |
+        sleep 15
         apt-get install pkg-config zip g++ zlib1g-dev unzip python3
